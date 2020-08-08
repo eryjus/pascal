@@ -1,0 +1,18 @@
+#####################################################################################################################
+##
+##  Tupfile -- An alternative to 'make` build system for the Century Pascal Compiler
+##
+##        Copyright (c)  2020 -- Adam Clark
+##
+## -----------------------------------------------------------------------------------------------------------------
+##
+##     Date      Tracker  Version  Pgmr  Description
+##  -----------  -------  -------  ----  ---------------------------------------------------------------------------
+##  2020-Aug-08  Initial  v0.0.0   ADCL  Initial version
+##
+#####################################################################################################################
+
+
+: ../src/cpas/cpas.cc ../obj/*.o |> clang++ -stdlib=libstdc++ -std=c++14 -o %o %f -lstdc++ |> cpas
+: ../src/lexer/lexer.cc ../obj/*.o |> clang++ -stdlib=libstdc++ -std=c++14 -o %o %f -lstdc++ |> lexer
+: ../src/parser/parser.cc ../obj/*.o |> clang++ -stdlib=libstdc++ -std=c++14 -o %o %f -lstdc++ |> parser

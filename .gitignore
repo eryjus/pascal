@@ -1,1 +1,20 @@
+##
+## -- ignore some folders
+##    -------------------
 .tup
+
+
+##
+## -- ignore some wildcard file names
+##    -------------------------------
+obj/*.o
+
+
+##
+## -- some specific files
+##    -------------------
+bin/cpas
+bin/lexer
+bin/parser
+
+
